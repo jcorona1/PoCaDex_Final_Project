@@ -1,0 +1,95 @@
+@charset "ISO-8859-1";
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+*
+{
+	font-family: 'Roboto Mono', monospace;
+}
+
+table
+{
+	text-align: center;
+}
+
+.display-centered
+{
+	position: absolute;
+	top: 25%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.grid-container
+{
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	grid-gap: 10px;
+	justify-content: center;
+	max-width: 1050px;
+}
+
+.grid-cell
+{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	grid-gap: 5px;
+	text-align: center;
+	border: 1px solid;
+	border-radius: 5px;
+	margin: 3px;
+}
+
+.field
+{
+	background: #eaeaea;
+	padding: 3px;
+}
+
+.field-card-tier
+{
+	grid-row: 1;
+	grid-column: 1;
+	border-top-left-radius: 5px;
+}
+
+.field-card-name
+{
+	grid-row: 1;
+	grid-column: 2/4;
+	border-top-right-radius: 5px;
+}
+
+.field-card-set
+{
+	grid-row: 2;
+	grid-column: 1/3;
+}
+
+.field-card-set-list-number
+{
+	grid-row: 2;
+	grid-column: 3;
+}
+
+.field-update-button
+{
+	grid-row: 3;
+	grid-column: 1;
+	border-bottom-left-radius: 5px;
+}
+
+.field-card-quantity
+{
+	grid-row: 3;
+	grid-column: 2;
+	
+}
+
+.field-delete-button
+{
+	grid-row: 3;
+	grid-column: 3;
+	border-bottom-right-radius: 5px;
+}
+

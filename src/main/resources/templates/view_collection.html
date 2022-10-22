@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" 
+	integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" 
+	crossorigin="anonymous">
+<link th:href="@{/webpage_layout.css}" rel="stylesheet" />
+<meta charset="ISO-8859-1">
+<title>View Card Collection</title>
+</head>
+<body>
+	<div align = "center">
+		<h1>Card Collection</h1>
+		<hr>
+		<div class = "grid-container">
+			<div th:each = "card: ${listCards}" class = "grid-cell">
+				<div th:text = "${card.cardName}" class = "field field-card-name"></div>
+				<div th:text = "${card.cardSet}" class = "field field-card-set"></div>
+				<div th:text = "${card.cardTier}" class = "field field-card-tier"></div>
+				<div th:text = "${card.cardSetListNumber}" class = "field field-card-set-list-number"></div>
+				<div th:text = "${card.cardQuantity}" class = "field field-card-quantity"></div>
+			</div>
+		</div>
+		<a th:href = "@{/updateCollection}" class = "btn btn-primary mt-3">Update Collection</a>
+		<hr>
+		<a th:href = "@{/}" class = "btn btn-primary mb-3">Back</a>
+	</div>
+</body>
+</html>

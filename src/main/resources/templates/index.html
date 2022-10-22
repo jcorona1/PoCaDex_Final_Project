@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" 
+	integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" 
+	crossorigin="anonymous">
+<link th:href="@{/webpage_layout.css}" rel="stylesheet" />
+<meta charset = "ISO-8859-1">
+<title>PoCaDex!</title>
+</head>
+<body>
+	<div align = "center" class = "display-centered">
+		<h1>Welcome to PoCaDex!</h1>
+		<hr>
+		<h6>Your <u>Po</u>ke&#769mon <u>Ca</u>rd <u>Dex</u></h6>
+		<hr>
+		<table>
+			<thead></thead>
+			<tbody>
+				<tr>
+					<td><a th:href = "@{/viewCollection}" class = "btn btn-primary btn-sm mb-2">View Collection</a>
+				</tr>
+				<tr>
+					<td><a th:href = "@{/addNewCards}" class = "btn btn-primary btn-sm mb-2">Add New Cards</a>
+				</tr>
+				<tr>
+					<td><a th:href = "@{/updateCollection}" class = "btn btn-primary btn-sm mb-2">Update Collection</a>
+				</tr>
+			</tbody>		
+		</table>
+	</div>
+</body>
+</html>

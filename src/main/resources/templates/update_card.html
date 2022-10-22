@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" 
+	integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" 
+	crossorigin="anonymous">
+<link th:href="@{/webpage_layout.css}" rel="stylesheet" />
+<meta charset="ISO-8859-1">
+<title>Update Card</title>
+</head>
+<body>
+	<div align = "center">
+		<h1>Update Card</h1>
+		<hr>
+		<form action = "#" th:action = "@{/saveCardUpdate}" th:object = "${card}" method = "POST">
+			
+			<input type = "hidden" th:field = "*{cardId}"/>
+			
+			<input type = "text" th:field = "*{cardName}" class = "form-control mb-2">
+			<input type = "text" th:field = "*{cardSet}" class = "form-control mb-2">
+			<input type = "text" th:field = "*{cardTier}" class = "form-control mb-2">
+			<input type = "text" th:field = "*{cardSetListNumber}" class = "form-control mb-2">
+			<input type = "number" th:field = "*{cardQuantity}" class = "form-control mb-2">
+			
+			<button type = "submit" class = "btn btn-primary">Update Card</button>
+		</form>
+		<hr>
+		<a th:href = "@{/}" class = "btn btn-primary mb-3">Back</a>
+	</div>
+</body>
+</html>
